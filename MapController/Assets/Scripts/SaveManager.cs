@@ -8,6 +8,8 @@ using System.IO;
 
 public class SaveManager : MonoBehaviour {
 
+    const string lastPathSaveKey = "pathSaveKey";
+
     SimulatorManager sim;
 
     private void Awake()
@@ -19,10 +21,10 @@ public class SaveManager : MonoBehaviour {
     {
         SaveFileDialog window = new SaveFileDialog();
 
-        window.InitialDirectory = UnityEngine.Application.dataPath;
+        window.InitialDirectory = GetInitPath();
         window.Filter = "json files (*.json)|*.json";
         window.FilterIndex = 1;
-
+        
         if (window.ShowDialog() == DialogResult.OK && window.FileName != "")
         {
             try
@@ -33,10 +35,12 @@ public class SaveManager : MonoBehaviour {
                 UI.UIController.instance.SetName(
                     System.IO.Path.GetFileNameWithoutExtension(window.FileName)
                     );
+                PlayerPrefs.SetString(lastPathSaveKey, window.FileName);
             }
             catch (Exception e)
             {
                 Debug.LogError (e);
+                ErrorMessage(e.ToString());
             }
         }
     }
@@ -45,7 +49,7 @@ public class SaveManager : MonoBehaviour {
     {
         OpenFileDialog window = new OpenFileDialog();
 
-        window.InitialDirectory = UnityEngine.Application.dataPath;
+        window.InitialDirectory = GetInitPath();
         window.Filter = "json files (*.json)|*.json";
         window.FilterIndex = 1;
 
@@ -58,27 +62,50 @@ public class SaveManager : MonoBehaviour {
                 StreamReader sr = new StreamReader(Path.GetFullPath(window.FileName));
                 json = sr.ReadToEnd();
                 sr.Close();
+                PlayerPrefs.SetString(lastPathSaveKey, window.FileName);
             }
             catch (Exception e)
             {
+                json = "";
                 Debug.LogError(e);
+                ErrorMessage(e.ToString());
             }
         }
 
         try
         {
-           SimulatorManager.Data data = JsonUtility.FromJson<SimulatorManager.Data>(json);
-            sim.data = data;
-            UI.UIController.instance.DisableAllViews();
-            UI.UIController.instance.SetName(
-                    System.IO.Path.GetFileNameWithoutExtension(window.FileName)
-                    );
+            if (!string.IsNullOrEmpty(json))
+            {
+                SimulatorManager.Data data = JsonUtility.FromJson<SimulatorManager.Data>(json);
+                sim.data = data;
+                UI.UIController.instance.DisableAllViews();
+                UI.UIController.instance.SetName(
+                        System.IO.Path.GetFileNameWithoutExtension(window.FileName)
+                        );
+            }
         }
         catch (Exception e)
         {
             Debug.LogError (e);
-            return;
+            ErrorMessage(e.ToString());
         }
     }
 
+    static string GetInitPath()
+    {
+        string path = Path.GetDirectoryName (PlayerPrefs.GetString(lastPathSaveKey, ""));
+        if (Directory.Exists (path)) {
+            return path;
+        }
+        return UnityEngine.Application.dataPath;
+    }
+
+    static void ErrorMessage(string msg, string name = "Error")
+    {
+        MessageBox.Show(msg,
+        name,
+        MessageBoxButtons.OK,
+        MessageBoxIcon.Error
+        );
+    }
 }

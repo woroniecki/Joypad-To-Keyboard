@@ -56,4 +56,12 @@ public class SimulatorManager : MonoBehaviour
         }
     }
 
+    public UnityEngine.UI.Image im;
+
+    public void Deb()
+    {
+        im.alphaHitTestMinimumThreshold = 1f;
+        Debug.Log(Time.time);
+    }
+
 }
