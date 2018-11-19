@@ -18,7 +18,7 @@ Moving mouse has to modes:
 - Mouse Circle Move (cursor is moving around circle, useful for running in games)
 to mouse moving you can add button actions.
 
-How it looks:
+How program looks:
 ![alt text](https://link2code.games/wp-content/uploads/2018/11/UI.jpg)
 
 How it works after configuration:
