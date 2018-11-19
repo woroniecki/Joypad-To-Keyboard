@@ -16,14 +16,14 @@ Moving mouse has to modes:
 to mouse moving you can add button actions.
 
 How it looks:
-<img src="https://link2code.games/wp-content/uploads/2018/11/UI.jpg" alt="" width="793" height="595" class="alignnone size-full wp-image-1363" />
+![alt text](https://link2code.games/wp-content/uploads/2018/11/UI.jpg)
 
 How it works after configuration:
 [![Watch the video](https://img.youtube.com/vi/mnZfOpr3Fuo/maxresdefault.jpg)](https://www.youtube.com/watch?v=mnZfOpr3Fuo)
 
 Requirments:
-Xbox controller 360 or One
-Windows 10
+- Xbox controller 360 or One
+- Windows 10
 
 HF & Enjoy
 
