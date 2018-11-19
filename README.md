@@ -1,4 +1,7 @@
 # Joypad-To-Keyboard
+
+Hobby project
+
 Software to use gamepad as keyboard and mouse. It's created for old games which not support pad steering.
 
 How to configure it:
