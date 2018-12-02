@@ -28,6 +28,10 @@ Requirments:
 - Xbox controller 360 or One
 - Windows 10
 
+Softwate:
+- Unity 2018.2.0f2
+- Visual Studio 2017
+
 HF & Enjoy
 
 To see more check project blog:
