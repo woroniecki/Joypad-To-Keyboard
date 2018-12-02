@@ -93,9 +93,17 @@ public class SaveManager : MonoBehaviour {
 
     static string GetInitPath()
     {
-        string path = Path.GetDirectoryName (PlayerPrefs.GetString(lastPathSaveKey, ""));
-        if (Directory.Exists (path)) {
-            return path;
+        try
+        {
+            string path = Path.GetDirectoryName(PlayerPrefs.GetString(lastPathSaveKey, ""));
+            if (Directory.Exists(path))
+            {
+                return path;
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.LogError(e);
         }
         return UnityEngine.Application.dataPath;
     }
