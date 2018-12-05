@@ -18,11 +18,11 @@ Moving mouse has to modes:
 - Mouse Circle Move (cursor is moving around circle, useful for running in games)
 to mouse moving you can add button actions.
 
-How it works after configuration:<br>
-[![Watch the video](https://img.youtube.com/vi/mnZfOpr3Fuo/hqdefault.jpg)](https://www.youtube.com/watch?v=mnZfOpr3Fuo)
-
 Configuration video tutorial:<br>
 [![Watch the video](https://img.youtube.com/vi/m5i4adH8RBE/hqdefault.jpg)](https://www.youtube.com/watch?v=m5i4adH8RBE)
+
+How it looks after configuration:<br>
+[![Watch the video](https://img.youtube.com/vi/mnZfOpr3Fuo/hqdefault.jpg)](https://www.youtube.com/watch?v=mnZfOpr3Fuo)
 
 Requirments:
 - Xbox controller 360 or One
