@@ -24,6 +24,9 @@ How program looks:
 How it works after configuration:
 [![Watch the video](https://img.youtube.com/vi/mnZfOpr3Fuo/maxresdefault.jpg)](https://www.youtube.com/watch?v=mnZfOpr3Fuo)
 
+Configuration video tutorial:
+[![Watch the video](https://img.youtube.com/vi/mnZfOpr3Fuo/maxresdefault.jpg)](https://www.youtube.com/watch?v=mnZfOpr3Fuo)
+
 Requirments:
 - Xbox controller 360 or One
 - Windows 10
