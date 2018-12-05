@@ -19,10 +19,10 @@ Moving mouse has to modes:
 to mouse moving you can add button actions.
 
 How it works after configuration:
-[![Watch the video](https://img.youtube.com/vi/mnZfOpr3Fuo/maxresdefault.jpg)](https://www.youtube.com/watch?v=mnZfOpr3Fuo)
+[![Watch the video](https://img.youtube.com/vi/mnZfOpr3Fuo/hqdefault.jpg)](https://www.youtube.com/watch?v=mnZfOpr3Fuo)
 
 Configuration video tutorial:
-[![Watch the video](https://img.youtube.com/vi/m5i4adH8RBE/maxresdefault.jpg)](https://www.youtube.com/watch?v=m5i4adH8RBE)
+[![Watch the video](https://img.youtube.com/vi/m5i4adH8RBE/hqdefault.jpg)](https://www.youtube.com/watch?v=m5i4adH8RBE)
 
 Requirments:
 - Xbox controller 360 or One
